@@ -1,0 +1,236 @@
+/*Figuring out Homepage/Sandbox Things*/
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', monospace;
+}
+
+.topbar {   
+    background: #005734;
+    border-bottom: 1px solid #000000;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar .brand { 
+    color: #ffffff; 
+    font-size: 1.1rem; 
+    letter-spacing: 2px; 
+}
+
+.topbar .user-info { 
+    font-size: 0.85rem; 
+    color: #ffffff; 
+}
+
+.topbar a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    margin-left: 1rem;
+}
+
+.topbar a:hover { 
+    color: #e8eaf6; 
+}
+
+.main { 
+    display: grid; 
+    grid-template-columns: 280px 1fr; 
+    gap: 0; 
+    min-height: calc(100vh - 53px); 
+}
+
+/* Sidebar */
+.sidebar {
+    background: #2f7756;
+    border-right: 1px solid #295426;
+    padding: 1.5rem 1rem;
+    overflow-y: auto;
+}
+
+.sidebar h6 {
+    color: #ffffff;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.challenge-item {
+    padding: 0.6rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.4rem;
+    font-size: 0.82rem;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.challenge-item.done { 
+    color: #4caf50; 
+}
+
+.challenge-item.done::before { 
+    content: "✓ "; 
+}
+
+.challenge-item.active {
+    border-color: #295426;
+    background: #032b00;
+    color: #e8eaf6;
+}
+
+.challenge-item.locked { 
+    color: #799b7d; 
+}
+
+/* Main content */
+.content { padding: 2rem; }
+
+.challenge-box {
+    background: #206839;
+    border: 1px solid #295426;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.challenge-box h5 { 
+    color: #ffffff; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: 1px; 
+}
+
+.challenge-box p { 
+    color: #ffffff; 
+    margin-bottom: 0; 
+    font-size: 0.95rem; 
+}
+
+.hint { 
+    color: #ffffff; 
+    font-size: 0.82rem; 
+    margin-top: 0.75rem; 
+}
+
+textarea {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #3949ab;
+    border-radius: 4px;
+    color: #000000;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    padding: 1rem;
+    resize: vertical;
+    min-height: 100px;
+}
+
+textarea:focus { 
+    outline: none; 
+    border-color: #7986cb; 
+}
+
+.btn-run {
+    background: #3949ab;
+    color: #e8eaf6;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 0.75rem;
+}
+
+.btn-run:hover { 
+    background: #5c6bc0; 
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+.result-table th {
+    background: #3949ab;
+    color: #e8eaf6;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+.result-table td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #1a1a2e;
+    color: #c5cae9;
+}
+.result-table tr:nth-child(even) td { 
+    background: #1a1a2e; 
+}
+
+.alert-success { 
+    background: #1b3a1b; 
+    border: 1px solid #4caf50; 
+    color: #a5d6a7; 
+    padding: 0.75rem 1rem; 
+    border-radius: 4px; 
+    margin-bottom: 1rem; 
+}
+
+.alert-danger  { 
+    background: #ffdcdc; 
+    border: 1px solid #e53935; 
+    color: #000000; 
+    padding: 0.75rem 1rem; 
+    font-weight: bold;
+    border-radius: 4px; 
+    margin-bottom: 1rem; 
+}
+
+/* Achievement toast */
+.achievement-toast {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #1a1a2e;
+    border: 1px solid #ffd600;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    color: #fff9c4;
+    font-size: 0.9rem;
+    z-index: 999;
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(2rem); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.xp-bar-wrap { 
+    background: #0f0f1a; 
+    border-radius: 4px; 
+    height: 6px; 
+    margin-top: 0.25rem; 
+    width: 120px; 
+}
+
+.xp-bar { 
+    background: #5c6bc0; 
+    height: 6px; 
+    border-radius: 4px; 
+}
+
+.all-done {
+    text-align: center;
+    padding: 3rem;
+    color: #7986cb;
+}
+
+.all-done .trophy { 
+    font-size: 4rem; 
+}
