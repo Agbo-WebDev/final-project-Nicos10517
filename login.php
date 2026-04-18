@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="style.css">
 </head>
 
-// Styling time!! Sort of, this is the UI of the login interface
+<!-- Styling time!! Sort of, this is the UI of the login interface-->
 <body>
     <div class="auth-box">
         <h2>🔐 Log In</h2>
