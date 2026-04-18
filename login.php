@@ -1,9 +1,12 @@
 <?php
+// This is for loading a session and requiring connection to the database
 session_start();
 require 'db.php';
 
+// Gotta have that handler!
 $error = "";
 
+// This is basically the heart of the login, it requests the username entered from the database and sees if it exists and if the passcode matches
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = $_POST['password'];
@@ -31,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
+// Styling time!! Sort of, this is the UI of the login interface
 <body>
     <div class="auth-box">
         <h2>🔐 Log In</h2>
@@ -50,6 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <button type="submit" class="btn btn-primary">LOG IN</button>
         </form>
+
+        //In case you do not have an account, this is the href to register.php which will add a new user to the database
 
         <div class="auth-link">
             No account? <a href="register.php">Register</a>

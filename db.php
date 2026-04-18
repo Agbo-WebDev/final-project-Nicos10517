@@ -4,6 +4,8 @@ $dbname = "projdb";
 $user = "root";
 $pass = "";
 
+// We went over this in class, this is just esablishing a connection to xampp (the database)
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
