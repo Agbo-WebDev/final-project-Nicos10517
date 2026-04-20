@@ -4,7 +4,9 @@ Hello! Welcome to my SQL Sandbox! Here are the instructions for setting it up!
 Please download the folder and add it to your htdocs folder located in your Xampp folder!
 
 Once you've added the folder, note the projdb sql file for later use.
-Connect to phpmyAdmin, and select import. Upload  the projdb sql file, no other settings need to change.
+Start up Apache and MySQL on Xampp. Once you've done that, using a web browser, got to localhost/phpMyAdmin.
+Connect to phpmyAdmin, and create a database called projdb.
+With projdb selected, import the projdb sql file, no other settings need to change.
 
 If you're having issues with the import for some reason, you can also manually create the projdb database, and then use the queries in the projdb file to populate it.
 
