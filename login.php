@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn btn-primary">LOG IN</button>
         </form>
 
-        //In case you do not have an account, this is the href to register.php which will add a new user to the database
+        <!--In case you do not have an account, this is the href to register.php which will add a new user to the database-->
 
         <div class="auth-link">
             No account? <a href="register.php">Register</a>
